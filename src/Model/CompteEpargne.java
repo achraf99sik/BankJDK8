@@ -1,6 +1,8 @@
 package Model;
 
 
+import java.util.List;
+
 public class CompteEpargne extends Compte {
     private double tauxInteret;
 
@@ -16,7 +18,19 @@ public class CompteEpargne extends Compte {
         return this.getSolde() * this.tauxInteret;
     };
     public void afficherDetails(){
-        super.afficherDetails();
+        System.out.println("----------------------------------------");
+        System.out.println("Code: " + this.getCode());
+        System.out.println("Solde: " + this.getSolde());
+        System.out.println("Interets: " + this.calculerInteret());
+        System.out.println("List de Operations: ");
+        List<Operation> ops = this.getOperations(this.getCode());
+        if (ops == null || ops.isEmpty()) {
+            System.out.println("    Aucune operation.");
+        } else {
+            for (Operation op : ops) {
+                System.out.println("    Numero: " + op.getNumero() + ", Montant: " + op.getMontant() + ", Date: " + op.getDate());
+            }
+        }
         System.out.println("Taux interet: "+this.getTauxInteret());
         System.out.println("----------------------------------------");
     };
