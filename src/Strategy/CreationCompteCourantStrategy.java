@@ -4,6 +4,7 @@ import Model.Compte;
 import Model.CompteCourant;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class CreationCompteCourantStrategy implements CreationCompteStrategy {
 
@@ -14,8 +15,8 @@ public class CreationCompteCourantStrategy implements CreationCompteStrategy {
         System.out.print("Saisissez le solde du compte : ");
         compte.setSolde(input.nextDouble());
 
-        System.out.print("Saisissez le code du compte : ");
-        compte.setCode(input.nextInt());
+        int code = ThreadLocalRandom.current().nextInt(10000, 100000);
+        compte.setCode(code);
 
         System.out.print("Saisissez le decouvert autorise : ");
         compte.setDecouvert(input.nextDouble());

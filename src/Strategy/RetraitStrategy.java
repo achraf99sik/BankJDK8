@@ -17,6 +17,7 @@ public class RetraitStrategy implements OperationStrategy {
 
         System.out.print("Saisissez le Montant du operation : ");
         operation.setMontant(input.nextDouble());
+        input.nextLine();
 
         System.out.print("Saisissez la destination du operation : ");
         operation.setDestination(input.nextLine());
