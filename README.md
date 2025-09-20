@@ -8,6 +8,9 @@ Ce projet est une application bancaire simple développée en Java 8. Elle perme
 
 *   Java 8
 
+## Planification:
+*  https://achrafsikal.atlassian.net/jira/software/projects/BAN/boards/2?atlOrigin=eyJpIjoiNWE4MDlhMDllNzg0NGMwYzg5ODBhNjc0MjFmMzAzYzkiLCJwIjoiaiJ9 
+
 ## Structure du projet
 
 Le projet est organisé en plusieurs packages :
